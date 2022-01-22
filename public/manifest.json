@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Bitbucket Monitor",
+  "homepage_url": "http://localhost:8080/",
+  "description": "A Vue Browser Extension",
+  "permissions": [
+    "<all_urls>",
+    "*://*/*"
+  ],
+  "icons": {
+    "32": "favicon.ico"
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Bitbucket Monitor",
+    "default_icon": {
+      "32": "favicon.ico"
+    }
+  },
+  "version": "0.1.0",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
