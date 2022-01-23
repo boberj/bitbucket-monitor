@@ -1,20 +1,24 @@
 {
   "manifest_version": 2,
   "name": "Bitbucket Monitor",
-  "homepage_url": "http://localhost:8080/",
-  "description": "A Vue Browser Extension",
+  "homepage_url": "https://github.com/boberj/bitbucket-monitor",
+  "description": "Get notified when PRs need your attention.",
   "permissions": [
     "<all_urls>",
     "*://*/*"
   ],
   "icons": {
-    "32": "favicon.ico"
+    "32": "icons/monitoring-32.png",
+    "64": "icons/monitoring-64.png",
+    "128": "icons/monitoring-128.png"
   },
   "browser_action": {
     "default_popup": "index.html",
     "default_title": "Bitbucket Monitor",
     "default_icon": {
-      "32": "favicon.ico"
+      "32": "icons/monitoring-32.png",
+      "64": "icons/monitoring-64.png",
+      "128": "icons/monitoring-128.png"
     }
   },
   "version": "0.1.0",

@@ -1,16 +1,40 @@
 <template>
-  <ul>
-    <li><input v-model="username" placeholder="Username" /></li>
-    <li><input v-model="token" type="password" placeholder="Token"/></li>
-    <li><button v-on:click="load">Load data</button></li>
-  </ul>
-  <ul>
-    <li v-for="item in work" :key="item.id">
-      ({{ item.state }})
-      <a :href="item.url">{{ item.title }}</a>
-      ({{ item.author }})
-    </li>
-  </ul>
+  <section class="section">
+    <div class="container">
+      <div class="field">
+        <label class="label">Username</label>
+        <div class="control has-icons-left">
+          <input class="input" type="text" v-model="username" />
+          <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </span>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Token</label>
+        <div class="control has-icons-left">
+          <input class="input" type="password" v-model="token" />
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <button class="button is-link" v-on:click="load">Load data</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content" v-for="item in work" :key="item.id">
+        <span class="tag">
+          {{ item.state }}
+        </span>
+        <a :href="item.url">{{ item.title }}</a>
+        <small>({{ item.author }})</small>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -58,8 +82,4 @@ export default {
 </script>
 
 <style scoped>
-ul {
-  list-style-type: none;
-  padding: 0;
-}
 </style>
