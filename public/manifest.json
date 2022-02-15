@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Bitbucket Monitor",
+  "homepage_url": "https://github.com/boberj/bitbucket-monitor",
+  "description": "Get notified when PRs need your attention.",
+  "permissions": [
+    "<all_urls>",
+    "*://*/*",
+    "storage"
+  ],
+  "icons": {
+    "32": "icons/monitoring-32.png",
+    "64": "icons/monitoring-64.png",
+    "128": "icons/monitoring-128.png"
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Bitbucket Monitor",
+    "default_icon": {
+      "32": "icons/monitoring-32.png",
+      "64": "icons/monitoring-64.png",
+      "128": "icons/monitoring-128.png"
+    }
+  },
+  "version": "0.1.0",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
